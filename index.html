@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script>
-        function getToastMessage() {
-            return document.getElementById('toastMessage').value;
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Hello</title>
+
+    <style>
+      body, html {
+        height: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #F89821;
+        background-color: #ffffff;
+        padding: 20px;
+        margin-bottom: 100px;
+      }
+    </style>
+
+  </head>
+  <body>
+      <input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" />
+      <br/><br/>
+      <input type="button" value="Show Version" onClick="showVersion('called within the html')" />
+      <br/><br/>
+      <p id="version"></p>
+      <script type="text/javascript">
+        <!-- Sending value to Android -->
+        function showAndroidToast(toast) {
+            AndroidInterface.showToast(toast);
         }
-        function concatenateStrings(arg1, arg2) {
-            return arg1 + arg2;
+
+        <!-- Getting value from Android -->
+        function showVersion(msg) {
+            var myVar = AndroidInterface.getAndroidVersion();
+            document.getElementById("version").innerHTML = msg + " You are running API Version " + myVar;
         }
-        function showToast() {
-            MyJavascriptInterface.showToast(getToastMessage());
-        }
-    </script>
-</head>
-<body>
-<div style="max-width:960px; margin: auto; text-align:center;">
-    <div style="margin-top: 50px;">
-        <button id="changeColor" type="button" onclick="this.style.backgroundColor='red'">Change color</button>
-    </div>
-    <div style="margin-top: 50px;">
-        <input id="toastMessage" type="text" placeholder="Toast message"/>
-    </div>
-    <div style="margin-top: 50px;">
-        <button id="showToast" type="button" onclick="showToast()">Show toast</button>
-    </div>
-</div>
-</body>
+      </script>
+  </body>
 </html>
