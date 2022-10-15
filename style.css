@@ -1,0 +1,15 @@
+
+
+    body, html {
+      height: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #F89821;
+      background-color: #ffffff;
+      padding: 20px;
+      margin-bottom: 100px;
+    }
+ 
+    
