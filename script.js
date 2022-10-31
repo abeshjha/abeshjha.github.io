@@ -4,7 +4,8 @@ alert("Login successfully");
 }  
 
 function create(){  
-    alert("Login successfully");   
+    <a href="test_get.php?subject=PHP&web=W3schools.com">Test $GET</a>
+  
 }  
 
 //<!-- Sending value to Android -->
