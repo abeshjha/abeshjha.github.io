@@ -4,7 +4,7 @@ alert("Login successfully");
 }  
 
 function create(){  
-    alert("Login successfully");   
+    location.href="https://ica.edu.np/Dems/API/project_api.php?email=abc&password=dd" 
 }  
 
 //<!-- Sending value to Android -->
