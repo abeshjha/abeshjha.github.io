@@ -10,7 +10,7 @@
 <input name="id" type="text" placeholder="Enter your email id"/>  
 <h4> PASSWORD</h4>  
 <input name="pass" type="password" placeholder="Enter your password"/></br></br>  
-<input type="submit" value="Send Message Directly" onClick="create('abc','123')"/>  
+<input type="submit" value="Send Message Directly" onClick="create(document.getElementById('id').value,document.getElementById('pass').value)"/>  
 <input type="button" value="Send Message through Host App" onClick="showAndroidToast('abc','123')"/>  
 </form>  
 <script src="script.js">  
