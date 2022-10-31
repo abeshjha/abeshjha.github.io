@@ -3,13 +3,13 @@ function submit_form(){
 alert("Login successfully");  
 }  
 
-function create(){  
-    location.href="https://ica.edu.np/Dems/API/project_api.php?email=abc&password=dd" 
+function create(id,pass){  
+    location.href="https://ica.edu.np/Dems/API/project_api.php?email="+ id + "&password="+pass
 }  
 
 //<!-- Sending value to Android -->
-function showAndroidToast(toast) {
-    AndroidInterface.showToast(toast);
+function showAndroidToast(id,pass) {
+    AndroidInterface.showToast(id,pass);
 }
 
 // <!-- Getting value from Android -->
