@@ -7,11 +7,12 @@
 <h3> LOGIN </h3>  
 <formform ="Login_form" onsubmit="submit_form()">  
 <h4> USERNAME</h4>  
-<input name="id" type="text" placeholder="Enter your email id"/>  
+<input name="username" id="username" type="text" placeholder="Enter your email id"/>  
 <h4> PASSWORD</h4>  
 <input name="pass" type="password" placeholder="Enter your password"/></br></br>  
-<input type="submit" value="Send Message Directly" onClick="create(document.getElementById('id').value,document.getElementById('pass').value)"/>  
+<input type="submit" hidden value="Send Message Directly" />  
 <input type="button" value="Send Message through Host App" onClick="showAndroidToast('abc','123')"/>  
+<input type="button" value="Send Message Directly" onClick="showDirect('abc','123')"/> 
 </form>  
 <script src="script.js">  
 </script>  
