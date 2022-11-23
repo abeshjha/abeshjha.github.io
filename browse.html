@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirect Webpage</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter URL address" id="myInput">
+    <button type="button" onclick="getInputValue();">Get Value</button>
+    
+    <script>
+        function getInputValue(){
+            // Selecting the input element and get its value 
+            var inputVal = document.getElementById("myInput").value;
+            window.location.href = "http://"+inputVal; 
+            
+        }
+    </script>
+</body>
+</html>
