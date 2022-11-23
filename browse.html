@@ -5,17 +5,18 @@
 </head>
 <body>
     <input type="text" placeholder="Enter URL address" id="myInput">
-    <button type="button" onclick="getInputValue();">Browse Directly</button>
-    <button type="button" onclick="getHostApp(text);">Browse Via Host App</button>
+    <button type="button" onclick="getInputValue()">Browse Directly</button>
+    <button type="button" onclick="getHostApp()">Browse Via Host App</button>
     <script>
         function getInputValue(){
             // Selecting the input element and get its value 
             var inputVal = document.getElementById("myInput").value;
-            window.location.href = "http://"+inputVal; 
+            window.location.href = "https://"+inputVal; 
             
         }
-        function getHostApp(text){
-            AndroidInterface.browseURL(text);
+        function getHostApp(){
+            var inputVal = document.getElementById("myInput").value;
+            AndroidInterface.browseURL(inputVal);
             
         }
     </script>
