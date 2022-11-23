@@ -4,14 +4,15 @@
 <title>User Authentication</title>
 </head>
 <body>
-    <input type="text" placeholder="Get user number" id="myInput">
-    <button type="button" onclick="getInput()">Browse Directly</button>
+    <p id="number"></p>
+    <button type="button" onclick="getInput()">Fetch Host Number and Authorize </button>
    
     <script>
         function getInput(){
-            var myVar = AndroidInterface.getAndroidVersion();
-            alert(myVar);
-         //   document.getElementById("version").innerHTML = msg + " You are running API Version " + myVar;
+           
+        //  alert("hrllo");
+             var myVar = AndroidInterface.getAndroidVersion();
+            document.getElementById("number").innerHTML = "Host App Contact Fetched:" ;
             
         }
         
