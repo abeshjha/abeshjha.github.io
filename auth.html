@@ -6,6 +6,12 @@
 <body>
     <p id="number"></p>
     <button type="button" onclick="getInput()">Fetch Host Number and Authorize </button>
+
+    <br><br><br><br>
+
+    <button type="button" onclick="getCamera()">Get Camera Permission</button>
+    <button type="button" onclick="getContact()">Get Contacts Permission</button>
+
    
     <script>
         function getInput(){
@@ -15,6 +21,15 @@
             document.getElementById("number").innerHTML = "Host App Contact Fetched:" + myVar;
             
         }
+        function getCamera(){
+           
+            AndroidInterface.showCamera();
+             
+         }
+         function getContact(){
+            AndroidInterface.showContact();
+             
+         }
         
     </script>
 </body>
