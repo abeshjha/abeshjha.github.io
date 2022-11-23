@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>User Authentication</title>
+</head>
+<body>
+    <input type="text" placeholder="Get user number" id="myInput">
+    <button type="button" onclick="getInput()">Browse Directly</button>
+   
+    <script>
+        function getInput(){
+            var myVar = AndroidInterface.getAndroidVersion();
+            document.getElementById("version").innerHTML = msg + " You are running API Version " + myVar;
+            
+        }
+        
+    </script>
+</body>
+</html>
