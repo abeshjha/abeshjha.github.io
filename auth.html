@@ -7,7 +7,8 @@
     <button type="button" onclick="getCamera()">Fetch contact list</button> </br></br>
 <button type="button" onclick="getContact()">Fetch data of Contacts from host app</button> </br></br>
 </br>
-    <p id="myVariableValue"></p>
+<p id="number">Hello world</p></br>
+<p id="myVariableValue">Hello world</p>
 
 <table id="jsonTable">
 		<thead>
@@ -39,6 +40,7 @@
           	var jsonData = JSON.parse(contactsJson);
 	
 		       document.getElementById("myVariableValue").textContent = contactsJson;
+		            document.getElementById("number").innerHTML = "Host App Contact Fetched:" + jsonData;
 
              // Loop through the JSON data and add each row to the table
 		var tableBody = document.getElementById("jsonTable").getElementsByTagName("tbody")[0];
