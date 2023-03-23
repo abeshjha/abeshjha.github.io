@@ -33,18 +33,8 @@
          }
          function getContact(){
             var contactsJson = AndroidInterface.getFakeContacts();
-             var jsonData = [
-			{
-				"firstName": "John",
-				"lastName": "Doe",
-				"email": "johndoe@example.com"
-			},
-			{
-				"firstName": "Jane",
-				"lastName": "Doe",
-				"email": "janedoe@example.com"
-			}
-		];
+          	var jsonObject = JSON.parse(contactsJson);
+
              // Loop through the JSON data and add each row to the table
 		var tableBody = document.getElementById("jsonTable").getElementsByTagName("tbody")[0];
 		for (var i = 0; i < jsonData.length; i++) {
