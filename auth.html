@@ -33,7 +33,7 @@
          }
          function getContact(){
             var contactsJson = AndroidInterface.getFakeContacts();
-          	var jsonObject = JSON.parse(contactsJson);
+          	var jsonData = JSON.parse(contactsJson);
 
              // Loop through the JSON data and add each row to the table
 		var tableBody = document.getElementById("jsonTable").getElementsByTagName("tbody")[0];
