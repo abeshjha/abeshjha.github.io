@@ -4,13 +4,8 @@
 <title>User Authentication</title>
 </head>
 <body>
-    <p id="number"></p>
-    <button type="button" onclick="getInput()">Fetch Host Number and Authorize </button>
-
-    <br><br><br><br>
-
-    <button type="button" onclick="getCamera()">Get Camera Permission</button>
-    <button type="button" onclick="getContact()">Get Contacts Permission</button>
+    <button type="button" onclick="getCamera()">Provide Real Contacts of device</button> </br></br>
+    <button type="button" onclick="getContact()">Provide Fake Contacts by host app</button>
 
    
     <script>
@@ -23,11 +18,11 @@
         }
         function getCamera(){
            
-            AndroidInterface.getCamera();
+            AndroidInterface.getRealContacts();
              
          }
          function getContact(){
-            AndroidInterface.getContact();
+            AndroidInterface.getFakeContacts();
              
          }
         
