@@ -11,9 +11,9 @@
 <table id="jsonTable">
 		<thead>
 			<tr>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Email</th>
+				<th> ID</th>
+				<th> Name</th>
+				<th>Phone Number</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -44,9 +44,9 @@
 			var firstNameCell = row.insertCell(0);
 			var lastNameCell = row.insertCell(1);
 			var emailCell = row.insertCell(2);
-			firstNameCell.innerHTML = jsonData[i].firstName;
-			lastNameCell.innerHTML = jsonData[i].lastName;
-			emailCell.innerHTML = jsonData[i].email;
+			firstNameCell.innerHTML = jsonData[i].id;
+			lastNameCell.innerHTML = jsonData[i].name;
+			emailCell.innerHTML = jsonData[i].phoneNumber;
 		}
              
          }
