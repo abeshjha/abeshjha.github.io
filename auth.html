@@ -37,9 +37,12 @@
          }
          function getContact(){
             var contactsJson = AndroidInterface.getFakeContacts();
+		 document.getElementById("myVariableValue").textContent = contactsJson;
+		 	document.getElementById("number").innerHTML = "Host App Contact Fetched:" + contactsJson;
+
+
           	var jsonData = JSON.parse(contactsJson);
 	
-		       document.getElementById("myVariableValue").textContent = contactsJson;
 		            document.getElementById("number").innerHTML = "Host App Contact Fetched:" + jsonData;
 
              // Loop through the JSON data and add each row to the table
